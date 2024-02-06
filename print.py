@@ -3,7 +3,11 @@ class Print:
     def recursive_print(self, f):
         line = f.readline()
         # Task 1
-        # continue implementation here
+        if line == "":
+            return
+        remove_space = line.replace("/n" , " " )
+        print(remove_space)
+        self.recursive_print(f)
 
     def print_file(self, filename):
         f = open(filename)
@@ -17,7 +21,11 @@ class Print:
 
     def print_file_reverse(self, filename):
         f = open(filename)
+        if line == "":
+            return
+        remove_space = line.replace("/n" , " " )
         self.recursive_print_reverse(f)
+        print(remove_space)
         f.close()
 
 if __name__ == "__main__":
